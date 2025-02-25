@@ -17,8 +17,8 @@
     },
     {
       "matchPackageNames": ["postgres"],
-      "matchCurrentVersion": "/^16\\./",
-      "allowedVersions": ">=16.0.0 <17.0.0"
+      "matchCurrentVersion": ">=16",
+      "allowedVersions": "<17"
     }
   ]
 }
