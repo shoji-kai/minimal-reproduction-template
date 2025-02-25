@@ -1,1 +1,24 @@
-{}
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "timezone": "Asia/Tokyo",
+  "minimumReleaseAge": "3 days",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest", "pin", "lockFileMaintenance"],
+      "groupName": "Non-Major Updates"
+    },
+    {
+      "matchPackageNames": ["postgres"],
+      "matchCurrentVersion": "14.9-alpine3.18",
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["postgres"],
+      "matchCurrentVersion": "/^16\\./",
+      "allowedVersions": ">=16.0.0 <17.0.0"
+    }
+  ]
+}
